@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter * -Property Enabled | Where-Object {$_.Enabled -like “false”} | select -Property name | Export-Csv -Path C:\Temp\disabled_user.csv -Encoding UTF8 -Delimiter ";"
